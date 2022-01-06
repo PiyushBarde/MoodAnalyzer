@@ -27,5 +27,11 @@ public class MoodAnalyzerJunit {
 	public void givenMood_IsHappy_ShouldReturnException() {
 		MoodAnalyzer analzser = new MoodAnalyzer();
 		Assert.assertEquals("HAPPY",analzser.analyzeMood());
-	}       
+	}
+	
+	@Test
+	public void givenMood_IsNull_ShouldReturnException() {
+		MoodAnalyzer analzser = new MoodAnalyzer(null);
+		Assert.assertEquals("HAPPY",analzser.analyzeMood());
+	}
 }
